@@ -1,58 +1,26 @@
 "use client";
-import { HomeSlider, ListProduct, TopProductSlider } from "@/components/Slider";
-import {
-  Badge,
-  Box,
-  Card,
-  Container,
-  Grid,
-  Group,
-  Space,
-  Stack,
-  Text,
-} from "@mantine/core";
-import "./page.module.css";
-import Image from "next/image";
+import { ListProduct, TopProductSlider } from "@/components/Slider";
+import { Badge, Box, Card, Container, Group, Space, Text } from "@mantine/core";
 import { useAppStyles } from "@/hooks/use-app-styles";
 import {
   IconArrowsRightLeft,
   IconFlare,
   IconPremiumRights,
-  IconShieldCheckFilled,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { IconShieldCheck } from "@tabler/icons-react";
+import { HomeHero } from "@/components/Hero";
+import "./page.module.css";
 
 export default function Home() {
   const appStyles = useAppStyles();
 
   return (
     <main>
-      {/* Slider */}
-      <Container pb="xl">
-        <Grid>
-          <Grid.Col span={{ base: 12, lg: 8 }}>
-            <HomeSlider height={300} />
-          </Grid.Col>
-          <Grid.Col span={{ base: 12, lg: 4 }} h={300}>
-            <Stack h={300}>
-              <Card pos="relative" h="100%">
-                <Image src="/home-slider/free-ship.webp" alt="free-ship" fill />
-              </Card>
-              <Card pos="relative" h="100%">
-                <Image src="/home-slider/shop.webp" alt="shop" fill />
-              </Card>
-            </Stack>
-          </Grid.Col>
-        </Grid>
-      </Container>
-      {/* End Slider */}
+      {/* <HomeHero /> */}
 
-      {/* Body */}
-      <Box bg={appStyles.bg.body} mih="100vh" mt="md" py="md">
+      {/* <Box bg={appStyles.bg.body} mih="100vh" mt="md" py="md">
         <Container>
-          {/* Top Deal */}
-
           <Card p="lg">
             <Group justify="space-between">
               <Group gap="sm">
@@ -65,7 +33,6 @@ export default function Home() {
               <TopProductSlider />
             </Box>
           </Card>
-          {/* End Top Deal */}
 
           <Space h="md" />
 
@@ -114,9 +81,7 @@ export default function Home() {
             </Box>
           </Card>
         </Container>
-      </Box>
-
-      {/* End Body */}
+      </Box> */}
     </main>
   );
 }

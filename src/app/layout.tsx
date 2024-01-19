@@ -12,6 +12,7 @@ import { ReactNode } from "react";
 import { theme } from "@/theme/theme";
 import { AppStylesProvider } from "@/hooks/use-app-styles";
 import { Header } from "@/components/Header";
+import { HomeLayout } from "@/layouts/home/HomeLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,8 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={inter.className}>
         <MantineProvider theme={theme}>
           <AppStylesProvider>
-            <Header />
-            {children}
+            <HomeLayout>{children}</HomeLayout>
           </AppStylesProvider>
         </MantineProvider>
       </body>
